@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+	<title>replicate</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="js/jquery-1.11.0.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<link href='https://fonts.googleapis.com/css?family=Marck+Script' rel='stylesheet' type='text/css'>
+	<script src="js/wow.min.js"></script>
+    <script type="text/javascript">
+              $(document).ready(function(){
+              	    new WOW().init();
+					var $btns = $('.filter').click(function() {
+				  	if (this.id == 'all') {
+				    $('#parent > div').show();
+				  	} else {
+				    var $el = $('.' + this.id).show();
+				    $('#parent > div').not($el).hide();
+				  	}
+				  	$btns.removeClass('active');
+				  	$(this).addClass('active');
+					});
+				});
+	</script>
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/custome.css">
+</head>
+<body data-spy="scroll" data-target="#navigation" data-offset="120">
+<!-- *** NAVBAR ***
+_________________________________________________________ -->
+	<div class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar">
+	    <div class="container">
+	        <div class="navbar-header">
+	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+		            <span class="sr-only">Toggle navigation</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+	            </button>
+	            <a class="navbar-brand logo" href="#intro">iamsrini</a>
+	        </div>
+	        <div class="navbar-collapse collapse" id="navigation">
+						<ul class="nav navbar-nav navbar-right menu1">
+			      	<li><a href="#intro">INTRO</a></li>
+			        <li><a href="#about">ABOUT</a></li>
+			        <li><a href="#skills">SKILLS</a></li>
+			        <li><a href="#work">WORK</a></li>
+			        <li><a href="#contact">CONTACT</a></li>
+			      </ul>
+	        </div>	                	            <!--/.nav-collapse -->
+	    </div>
+	</div>
+        <!-- *** NAVBAR END *** -->
+<!-- *** INTRO IMAGE ***
+_________________________________________________________ -->
+
+	<div id="intro">
+		<div class="bgimg" >
+			<div class="intro-text">
+				<h1>Think.Design.Develop</h1>
+			</div>
+		</div>
+	</div>
+
+	<div id="about" class="wow fadeInLeft">
+		<div class="container">
+			<span class="logo logo-about">iamsrini</span>
+			<div class="about-text-line">Hi! I'M srinivasan@sini, a 22 years old Application devloper</div>
+			<div class="about-text">
+				<p>Hi! I'M SRINIVASAN@SINI, A 26 YEARS OLD SOFTWARE ENTHUSIAST
+					I have a Master degree in Information Systems from Monash University,Melbourne,Australia. I worked for Tata Consultancy services for 	almost three years in Business intelligence projects.I am passionate about mobile application and front end development.I find this as 	one of the most challenging career as it requires constant upgrading of knowledge and be open to criticism.I want to be involved in 	projects that I can be proud of, join an amazing team and advance my development career.I am ready to collaborate, so get in touch with me if you'd think we can make wonderful things together.
+				</p>
+			</div>
+		</div>
+	</div>
+
+<div id="skills" class="wow fadeInLeft">
+	<div class="container">
+		<div class="col-sm-12">
+			<span class="logo logo-about">iamsrini</span>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin purus arcu, rutrum nec faucibus vel, fermentum at nulla. Duis diam nunc, vehicula ut posuere vehicula, sodales ut lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin purus arcu, rutrum nec faucibus vel, fermentum at nulla. Duis diam nunc, vehicula ut posuere vehicula, sodales ut lectus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae</p>
+		</div>
+	</div>
+</div>
+
+<div id="work" class="wow fadeInLeft">
+	<div class="container">
+		<div class="col-sm-12">
+				<ul id="filters">
+			    <li><span class="filter active" id="all">All</span></li>
+			    <li><span class="filter" id="Web Design">Webdesign</span></li>
+			    <li><span class="filter" id="Mobile Apps">Mobile-Apps</span></li>
+			    <li><span class="filter" id="GitHub">Github</span></li>
+				</ul>
+
+				<!-- An element with an id is needed for the jQuery -->
+				<div id="parent">
+				  <!-- The base class is the box. Categories are then given as accessory classes. Any div can be in more than one category -->
+				  <div class="box web portfolio">Web Design <img src="img/portfolio-1.jpg"> </div>
+				  <div class="box app portfolio">Mobile Apps <img src="img/portfolio-2.jpg"></div>
+				  <div class="box git portfolio">GitHub <img src="img/portfolio-3.jpg"></div>
+				  <div class="box git portfolio">GitHub <img src="img/portfolio-4.jpg"></div>
+				  <div class="box git portfolio">GitHub <img src="img/portfolio-5.jpg"></div>
+				</div>
+		</div>
+	</div>
+</div>
+
+<div id="contact" class="wow fadeInLeft">
+	<div class="container">
+			<div class="col-md-12">
+				<h2 class="title">Contact me</h2>
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                    <form id="contact-form" method="post" action="contact.php">
+                        <div class="messages">
+                        </div>
+                        <div class="controls">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <input type="text" name="name" class="form-control" placeholder="Your firstnamerequired" required/>
+                                </div>
+                                <div class="col-md-6">
+                                  	<input type="text" name="surname" class="form-control" placeholder="Yourlastname" required/>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="email" class="form-control" placeholder="Your emailrequired"required>
+                                </div>
+                                <div class="col-md-6">
+                                    <input type="text" name="phone" class="form-control" placeholder="Your phone">
+                                </div>
+                                <div class="col-md-12">
+                                    <textarea name="message" class="form-control" placeholder="Message for me" required></textarea>
+                                </div>
+                                <div class="col-md-12 text-center">
+                                    <input type="submit" class="btn btn-primary btn-lg" value="Send message">
+                                </div>
+                            </div>
+                          </div>
+                    </form>
+                  </div>
+            </div>
+      </div>
+	</div>
+</div>
+</body>
+</html>
